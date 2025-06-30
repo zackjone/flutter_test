@@ -28,9 +28,6 @@ dependencies:
 
 
   flutter_cache_manager: ^3.4.1
-
-  #状态管理
-  get: ^4.6.5
   cached_network_image: 3.4.0
 
 dev_dependencies:

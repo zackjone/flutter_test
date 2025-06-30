@@ -1,9 +1,7 @@
 
 
 import 'package:flutter/material.dart';
-import 'package:flutter_localizations/flutter_localizations.dart';
-import 'package:flutter_test_app/app_pages.dart';
-import 'package:get/get.dart';
+import 'package:flutter_test_app/pages/home_page.dart';
 
 void main() async {
   runApp(MyApp());
@@ -23,29 +21,8 @@ class MyState extends State<MyApp> with WidgetsBindingObserver {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-        locale: Get.deviceLocale,
-        localizationsDelegates: const [
-          GlobalMaterialLocalizations.delegate,
-          GlobalWidgetsLocalizations.delegate,
-          GlobalCupertinoLocalizations.delegate,
-        ],
-        supportedLocales: const [
-          Locale('zh', 'CN'),
-          Locale('en', 'US'),
-        ],
-
-        //语言映射表
-        fallbackLocale: const Locale("zh", "CN"),
-        //读取失败时候默认语言
-        defaultTransition: Transition.rightToLeft,
-        debugShowCheckedModeBanner: false,
-        debugShowMaterialGrid: false,
-        theme: ThemeData(
-          primaryColor: Color(0xFFC18121),
-          tabBarTheme: const TabBarThemeData(dividerColor: Colors.transparent),
-        ),
-        initialRoute: '/',
-        getPages: AppPages.getAllPages());
+    return MaterialApp(
+      home: HomePage(),
+    );
   }
 }
