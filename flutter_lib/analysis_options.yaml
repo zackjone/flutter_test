@@ -1,0 +1,7 @@
+include: package:flutter_lints/flutter_lib.yaml
+linter:
+  rules:
+    - always_use_package_imports    # 强制 package 导入
+    - avoid_relative_imports       # 避免相对路径
+# Additional information about this file can be found at
+# https://dart.dev/guides/language/analysis-options
